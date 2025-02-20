@@ -27,5 +27,14 @@ const generanumb = function (e) {
     return "celle piene"
   }
 }
+
+const reset = function (e) {
+  e.preventDefault()
+  const celle1 = document.querySelectorAll(".celle")
+  for (let i = 0; i < celle1.length; i++) {
+    celle1[i].innerText = ""
+  }
+}
 creazioneCella(26)
 document.getElementById("generaNumb").addEventListener("click", generanumb)
+document.getElementById("resetTabellone").addEventListener("click", reset)
